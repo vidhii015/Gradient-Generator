@@ -17,9 +17,13 @@
         padding: 0;
         box-sizing: border-box;
       }
+      body {
+        height: 100vh;
+      }
       .gradient-generator {
         padding: 32px;
-        margin: 5% 36%;
+        margin: 0 auto;
+        margin-top: 5%;
         width: fit-content;
         border-radius: 11px;
         background-color: whitesmoke;
@@ -102,6 +106,66 @@
       }
       .gradient-generator .btns button:nth-child(2) {
         background-color: black;
+      }
+      @media (max-width: 400px) {
+        .gradient-generator {
+          padding: 15px;
+          margin-top: 20%;
+        }
+        .gradient-generator .display {
+          width: 270px;
+          height: 180px;
+        }
+        .gradient-generator .options .colors input {
+          width: 52px;
+        }
+        .gradient-generator textarea {
+          padding: 15px;
+        }
+        .gradient-generator #clipboard {
+          right: 25px;
+        }
+      }
+      @media (min-width: 400px) {
+        .gradient-generator {
+          padding: 32px;
+          margin-top: 10%;
+        }
+        .gradient-generator .display {
+          width: 270px;
+          height: 180px;
+        }
+        .gradient-generator .options .colors input {
+          width: 52px;
+        }
+        .gradient-generator textarea {
+          padding: 15px;
+        }
+      }
+      @media (min-width: 768px) {
+        .gradient-generator {
+          margin-top: 10%;
+        }
+      }
+      @media (min-width: 992px) {
+        .gradient-generator {
+          margin-top: 6%;
+        }
+        .gradient-generator .display {
+          width: 380px;
+          height: 230px;
+        }
+        .gradient-generator .options .colors input {
+          width: 65px;
+        }
+        .gradient-generator textarea {
+          padding: 25px 20px 15px;
+        }
+      }
+      @media (min-width: 1200px) {
+        .gradient-generator {
+          margin-top: 5%;
+        }
       }
     </style>
   </head>
