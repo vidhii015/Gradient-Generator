@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+      integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .gradient-generator {
+        padding: 32px;
+        margin: 5% 36%;
+        width: fit-content;
+        border-radius: 11px;
+        background-color: whitesmoke;
+        position: relative;
+      }
+      .gradient-generator .display {
+        width: 380px;
+        height: 230px;
+        border-radius: 8px;
+        border: 1px solid black;
+      }
+      .gradient-generator .options {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 25px;
+        font-size: 17px;
+      }
+      .gradient-generator .options .direction .select-box {
+        padding: 8px 17px;
+      }
+      .gradient-generator .options .direction .select-box select {
+        border: 0;
+        outline: 0;
+        font-size: 17px;
+        background-color: transparent;
+      }
+      .gradient-generator .options .colors input {
+        width: 65px;
+        height: 38px;
+      }
+      .gradient-generator .options .colors #color {
+        margin-left: 7px;
+      }
+      .gradient-generator .options .direction .select-box,
+      .gradient-generator .options .colors input,
+      .gradient-generator .btns button {
+        outline: 0;
+        border: 1px solid #aaaaaa;
+        border-radius: 4px;
+        margin-top: 6px;
+      }
+      .gradient-generator #clipboard {
+        position: absolute;
+        bottom: 27%;
+        right: 38px;
+        padding: 5px;
+        cursor: pointer;
+        transition: all 300ms;
+      }
+      .gradient-generator #clipboard:active {
+        scale: 0.9;
+      }
+      .gradient-generator textarea {
+        width: 100%;
+        color: #333;
+        font-size: 1.05rem;
+        resize: none;
+        padding: 25px 20px 15px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        margin-top: 20px;
+      }
+      .gradient-generator .btns {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 10px;
+      }
+      .gradient-generator .btns button {
+        padding: 12px 0;
+        width: 47%;
+        font-size: 17px;
+        border-radius: 7px;
+        color: whitesmoke;
+      }
+      .gradient-generator .btns button:active {
+        scale: 0.9;
+      }
+      .gradient-generator .btns button:nth-child(1) {
+        background-color: #8c8c8c;
+      }
+      .gradient-generator .btns button:nth-child(2) {
+        background-color: black;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="gradient-generator">
+      <div class="display"></div>
+      <div class="options">
+        <div class="direction">
+          <label for="direction">Direction</label>
+          <br />
+          <div class="select-box">
+            <select name="direction" id="direction">
+              <option value="Top">Top</option>
+              <option value="Right top">Right top</option>
+              <option value="Right">Right</option>
+              <option value="Right bottom">Right bottom</option>
+              <option value="Bottom">Bottom</option>
+              <option value="Left bottom">Left bottom</option>
+              <option value="Left">Left</option>
+              <option value="Left top" selected>Left top</option>
+            </select>
+          </div>
+        </div>
+        <div class="colors">
+          <label for="colors">Colors</label>
+          <br />
+          <input type="color" name="colors" id="color1" />
+          <input type="color" name="colors" id="color2" />
+        </div>
+      </div>
+      <i class="fa-regular fa-clipboard" id="clipboard"></i>
+      <textarea disabled>
+background-image: linear-gradient(to left top, #977DFE,  #6878FF);</textarea
+      >
+      <div class="btns">
+        <button id="refreshBtn">Refresh Colors</button>
+        <button id="applyBtn">Apply BG Color</button>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
