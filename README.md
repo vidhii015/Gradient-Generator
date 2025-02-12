@@ -1,2 +1,2 @@
 ## Live Demo  
-[View Website](https://vidhii015.github.io/Gradient-Generator/)
+[View Gradient Generator](https://vidhii015.github.io/Gradient-Generator/)
